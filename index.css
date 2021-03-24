@@ -1,0 +1,19 @@
+body {
+    background: radial-gradient(circle at 100% 50%, transparent 20%, rgba(#C9D0C7) 21%, rgba(2#C9D0C7) 34%, transparent 35%, transparent), radial-gradient(circle at 0% 50%, transparent 20%, rgba(#C9D0C7) 21%, rgba(#C9D0C7) 34%, transparent 35%, transparent) 0 -50px;
+    background-color: #C9D0C7;
+    background-size: 75px 100px;
+    color: black;
+}
+
+.navbar {
+    background-color: #C9D0C7;
+    color: white;
+}
+
+.newFont {
+    font-family: 'Nova Flat';
+    font-size: 22px;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}

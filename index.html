@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Plants</title>
+  <!-- <documentation at http://demos.jquerymobile.com/1.4.1/ > -->
+
+  <link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
+
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="index.js"></script>
+  <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+
+<body>
+
+  <!-- Start of  page ------------------------------------------------------------------>
+  <div data-role="page" id="home">
+
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>My Plants</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+        <li><a href="#home" class='active-page'>Home Page</a></li>
+        <li><a href="#AddPlants">Add Plants</a></li>
+        <li><a href="#ListPlants">List Plants</a></li>
+        <li><a href="#FindPlants">Find Plants</a></li>
+        </ul>
+      </div><!-- /navbar -->
+    </div>
+
+    <!--   page content -->
+    <div data-role="content" data-theme='b'>
+      <div class="newFont">
+        <h2> My Collection of Plants</h2>
+      </div>
+    </div>
+
+    <!--  page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Copyright 2021</h1>
+    </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+
+
+
+  <div data-role="page" id="AddPlants">
+    <!--  page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Add Plants</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#AddPlants" class='active-page'>Add Plants</a></li>
+          <li><a href="#ListPlants">List Plants</a></li>
+          <li><a href="#FindPlants">Find Plants</a></li>
+        </ul>
+      </div><!-- /navbar -->
+    </div>
+
+
+
+
+    <!-- page content -->
+  
+    <div data-role="content" data-theme='c'>
+      <h2>Please fill out the form below to add your plants to the list:</h2>
+      Plant name: <br />
+      <input type="text" value="" id="pname" />
+      Scientific Name: <br />
+      <input type="text" value="" id="scientific" />
+      Plant family: <br />
+      <input type="text" value="" id="family" />
+      Native Climate: <br />
+      <input type="text" value="" id="climate" />
+      Plant Color: <br />
+      <input type="text" value="" id="color" />
+      Enter URL with more information <br />
+      <input type="text" value="" id="URL" />
+      
+      <div class="ui-field-contain">
+        <label for="select-size">Plant Size</label>
+        <select name="select-size" id="select-size">
+          <option value="X-Small">X-Small</option>
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+          <option value="X-Large">X-Large</option>
+        </select>
+      </div>
+
+      <div class="ui-field-contain">
+        <label for="maintenance-level">Plant maintenance level</label>
+        <select name="maintenance-level" id="maintenance-level">
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+    
+    
+      <input type="button" value="Click To Add Plant" id="buttonAdd" data-inline="true" />
+      <input type="button" value="Clear Data" id="buttonClear" data-inline="true" />
+    </div>
+
+       
+    
+    <!--   page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Copyright 2021</h1>
+    </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+
+  <div data-role="page" id="ListPlants">
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>My Plant List</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+        <li><a href="#home">Home Page</a></li>
+        <li><a href="#AddPlants">Add Plants</a></li>
+        <li><a href="#ListPlants" class='active-page' >List Plants</a></li>
+        <li><a href="#FindPlants">Find Plants</a></li>
+         
+        </ul>
+      </div><!-- /navbar -->
+    </div>
+    <!--   page content -->
+    <div data-role="content" data-theme='e'>
+      <p> Here are my Plants</p>
+      <div id="divPlantList"></div>
+      <input type="button" value="Sort By Plant Size" id="buttonSortSize" data-inline="true" />
+      <input type="button" value="Sort By Plant Name" id="buttonSortPlantName" data-inline="true" />
+    </div>
+
+
+    <!--   page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Copyright 2021</h1>
+    </div>
+  </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+  <!-- Start of  page -->
+  <div data-role="page" id="details">
+  
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>My Plants</h1>
+      <div data-role="navbar" data-theme='b'>
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#AddPlants">Add Plants</a></li>
+          <li><a href="#ListPlants">List Plants</a></li>
+          <li><a href="#FindPlants">Find Plants</a></li>
+  
+        </ul>
+      </div><!-- /navbar -->
+    </div>
+  
+    <!--  content -->
+    <div data-role="content" data-theme='c'>
+      <p> Here are the details</p>
+      <p id="oneName"></p>
+      <p id="oneScientific"></p>
+      <p id="oneFamily"></p>
+      <p id="oneClimate"></p>
+      <p id="oneColor"></p>
+      <p id="oneSize"></p>
+      <p id="oneMaintenance"></p>
+      <p id="oneURL" hidden></p>
+      <input type="button" value="More Information" id="moreinfo" />
+    </div>
+    <input type="button" value="Delete" id="delete" style="background: rgb(216, 11, 11)"/>
+
+    
+  
+    <!--    footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Copyright 2021</h1>
+    </div>
+  
+  </div>
+
+
+
+  <div data-role="page" id="FindPlants">
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Find Plants</h1>
+      <div data-role="navbar" data-theme='b' id="nav_bar">
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#AddPlants">Add Plants</a></li>
+          <li><a href="#ListPlants">List Plants</a></li>
+          <li><a href="#FindPlants" class='active-page'>Find Plants</a></li>
+         
+        </ul>
+      </div><!-- /navbar -->
+    </div>
+    <!--   page content -->
+    <div data-role="content" data-theme='c'>
+      <h3>Here are a few recommendations based off of the most popular attributes in your plant list: </h3>
+
+      <div id="recommendations"></div>
+
+      <p>Use these buttons to find plants with a:</p>
+      <input type="button" value="Similar Size" id="sizeSort" data-inline="true" />
+      <input type="button" value="Similar Maintenance Level" id="maintenanceSort" data-inline="true" />
+      <input type="button" value="Similar Family" id="familySort" data-inline="true" />
+     
+  </div>
+
+    <!--   page footer -->
+    <div data-role="footer" data-theme='b'>
+      <h1>Copyright 2021</h1>
+    </div>
+  </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+
+  <p id="IDparmHere" hidden>change1</p>  <!--hidden, a place to stash the user ID -->
+</body>
+
+</html>
