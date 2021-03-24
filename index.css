@@ -1,19 +1,52 @@
-body {
-    background: radial-gradient(circle at 100% 50%, transparent 20%, rgba(#C9D0C7) 21%, rgba(2#C9D0C7) 34%, transparent 35%, transparent), radial-gradient(circle at 0% 50%, transparent 20%, rgba(#C9D0C7) 21%, rgba(#C9D0C7) 34%, transparent 35%, transparent) 0 -50px;
-    background-color: #C9D0C7;
-    background-size: 75px 100px;
-    color: black;
-}
-
-.navbar {
-    background-color: #C9D0C7;
+h1 {
     color: white;
 }
 
+h2 {
+    color: #4F5A4E;
+}
+
+h3 {
+    color: #6b5740
+}
+
+p {
+    color: #333333;
+}
+
+li {
+    color: rgb(43, 9, 9);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#myheader {
+    color: white;
+}
+
+.myHeader {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(43, 9, 9);
+}
+
 .newFont {
+    text-align: center;
     font-family: 'Nova Flat';
     font-size: 22px;
     font-size: 40px;
     font-weight: bold;
-    color: rgb(255, 255, 255);
+    color: rgb(43, 9, 9);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+#nav_bar ul li a.active-page {
+    background-color: white;
 }
